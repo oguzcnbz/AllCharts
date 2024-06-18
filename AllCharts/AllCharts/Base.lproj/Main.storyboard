@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6PA-3A-dXG">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bar Chart View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BarChartViewController" customModule="AllCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kti-gn-os6" customClass="BarChartView" customModule="DGCharts">
+                                <rect key="frame" x="0.0" y="59" width="393" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ACR-wH-5q2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kti-gn-os6" secondAttribute="trailing" id="SrI-kx-cJr"/>
+                            <constraint firstItem="kti-gn-os6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eML-KN-51i"/>
+                            <constraint firstItem="kti-gn-os6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vKq-2B-Oka"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barChart" destination="kti-gn-os6" id="GcE-ZP-i8u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2039" y="-18"/>
+        </scene>
+        <!--Line Chart View Controller-->
+        <scene sceneID="4bc-aa-CiP">
+            <objects>
+                <viewController id="Eej-wG-nfa" customClass="LineChartViewController" customModule="AllCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Czl-Ik-GcI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uu8-ip-EzN" customClass="LineChartView" customModule="DGCharts">
+                                <rect key="frame" x="0.0" y="59" width="393" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="uck-1U-n3P"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GJY-VK-tkz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Uu8-ip-EzN" firstAttribute="leading" secondItem="GJY-VK-tkz" secondAttribute="leading" id="bBG-KO-n6E"/>
+                            <constraint firstItem="Uu8-ip-EzN" firstAttribute="top" secondItem="GJY-VK-tkz" secondAttribute="top" id="hfO-lp-7Yf"/>
+                            <constraint firstItem="GJY-VK-tkz" firstAttribute="trailing" secondItem="Uu8-ip-EzN" secondAttribute="trailing" id="q0g-uc-gU4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lineChart" destination="Uu8-ip-EzN" id="CAO-HL-n1D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ai5-Jn-Lap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2889" y="-18"/>
+        </scene>
+        <!--Pie Chart View Controller-->
+        <scene sceneID="kEL-61-F0k">
+            <objects>
+                <viewController id="eCV-WE-AOR" customClass="PieChartViewController" customModule="AllCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4fw-IX-9Yo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5N8-hD-OsM" customClass="PieChartView" customModule="DGCharts">
+                                <rect key="frame" x="0.0" y="59" width="393" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ZYm-A8-1Ew"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="szG-UO-hwM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kx0-5T-Gp0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5N8-hD-OsM" firstAttribute="leading" secondItem="Kx0-5T-Gp0" secondAttribute="leading" id="Ejg-if-YC8"/>
+                            <constraint firstAttribute="trailing" secondItem="5N8-hD-OsM" secondAttribute="trailing" id="XfR-6m-m6G"/>
+                            <constraint firstItem="5N8-hD-OsM" firstAttribute="top" secondItem="Kx0-5T-Gp0" secondAttribute="top" id="hxB-6Q-tzf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pieChart" destination="5N8-hD-OsM" id="1PT-bZ-0OR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTs-Yw-6v8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3740" y="-18"/>
+        </scene>
+        <!--Scatter Chart View Controller-->
+        <scene sceneID="01E-iD-krh">
+            <objects>
+                <viewController id="eaE-dw-iW3" customClass="ScatterChartViewController" customModule="AllCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OEQ-FD-Fqe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0W-Kv-xxo" customClass="ScatterChartView" customModule="DGCharts">
+                                <rect key="frame" x="0.0" y="59" width="393" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="dgy-56-jcu"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="v86-na-hbd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qhy-DD-zOo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O0W-Kv-xxo" firstAttribute="top" secondItem="Qhy-DD-zOo" secondAttribute="top" id="165-mC-fdU"/>
+                            <constraint firstItem="O0W-Kv-xxo" firstAttribute="leading" secondItem="Qhy-DD-zOo" secondAttribute="leading" id="FGS-ky-m4Y"/>
+                            <constraint firstAttribute="trailing" secondItem="O0W-Kv-xxo" secondAttribute="trailing" id="xl9-YB-9js"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scatterChart" destination="O0W-Kv-xxo" id="5V2-cI-zZK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5vk-jZ-uoC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4621" y="-18"/>
+        </scene>
+        <!--Combined Chart View Controller-->
+        <scene sceneID="fIx-Wz-6nE">
+            <objects>
+                <viewController id="alp-mx-oed" customClass="CombinedChartViewController" customModule="AllCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pRb-iH-wzY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvj-L2-6kY" customClass="CombinedChartView" customModule="DGCharts">
+                                <rect key="frame" x="0.0" y="59" width="393" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="0TU-h0-7gw"/>
+                                    <constraint firstAttribute="height" constant="300" id="2w2-mT-MZf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TeE-qD-xEP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TeE-qD-xEP" firstAttribute="trailing" secondItem="zvj-L2-6kY" secondAttribute="trailing" id="FZA-Kf-N6L"/>
+                            <constraint firstItem="zvj-L2-6kY" firstAttribute="leading" secondItem="pRb-iH-wzY" secondAttribute="leading" id="n0n-1g-bAk"/>
+                            <constraint firstItem="zvj-L2-6kY" firstAttribute="top" secondItem="TeE-qD-xEP" secondAttribute="top" id="rmI-js-wcO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="combinedChart" destination="zvj-L2-6kY" id="EpH-JX-Wok"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hq4-90-r33" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7334" y="-18"/>
+        </scene>
+        <!--Candle Stick Chart View Controller-->
+        <scene sceneID="YBa-3O-IFy">
+            <objects>
+                <viewController id="EGa-Vb-PBt" customClass="CandleStickChartViewController" customModule="AllCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QV3-Kz-ODB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bS-kg-138" customClass="CandleStickChartView" customModule="DGCharts">
+                                <rect key="frame" x="0.0" y="59" width="393" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="I71-8c-H2U"/>
+                                    <constraint firstAttribute="height" constant="300" id="SFR-zG-KNu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q7E-5g-2D0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3bS-kg-138" firstAttribute="leading" secondItem="Q7E-5g-2D0" secondAttribute="leading" id="MoR-XV-XBW"/>
+                            <constraint firstItem="3bS-kg-138" firstAttribute="trailing" secondItem="Q7E-5g-2D0" secondAttribute="trailing" id="Owa-ku-8y3"/>
+                            <constraint firstItem="3bS-kg-138" firstAttribute="top" secondItem="Q7E-5g-2D0" secondAttribute="top" id="ieI-wM-RCI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="candleStickChart" destination="3bS-kg-138" id="3iT-VU-INe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JVr-VJ-QmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5524" y="-18"/>
+        </scene>
+        <!--Bubble Chart View Controller-->
+        <scene sceneID="Oyc-Mm-laO">
+            <objects>
+                <viewController id="6PA-3A-dXG" customClass="BubbleChartViewController" customModule="AllCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="csd-DQ-m8F">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cc2-wb-LVK" customClass="BubbleChartView" customModule="DGCharts">
+                                <rect key="frame" x="0.0" y="59" width="393" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="NID-nR-Pe2"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="Txd-Pl-8A8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XHj-AX-QzS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cc2-wb-LVK" firstAttribute="leading" secondItem="XHj-AX-QzS" secondAttribute="leading" id="2tl-Co-SLP"/>
+                            <constraint firstItem="cc2-wb-LVK" firstAttribute="top" secondItem="XHj-AX-QzS" secondAttribute="top" id="An2-pb-U08"/>
+                            <constraint firstAttribute="trailing" secondItem="cc2-wb-LVK" secondAttribute="trailing" id="LO0-QD-H72"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bubbleChart" destination="cc2-wb-LVK" id="GwU-uS-393"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lVE-ya-5JP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6424" y="-18"/>
+        </scene>
+        <!--Pie Diagram View Controller-->
+        <scene sceneID="bUz-2l-dQb">
+            <objects>
+                <viewController id="h94-Fm-hmz" customClass="PieDiagramViewController" customModule="AllCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FEa-nF-5wa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLP-C4-1EJ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAA-g1-aE8">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1542"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DonutDiagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVw-qv-xMx">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="f3s-to-FRp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKr-2G-IOY" customClass="PieDiagram" customModule="AllCharts" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="393" height="250"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="noS-sM-OJT"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DonutDiagramWithSpace" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBH-dm-lF7">
+                                                <rect key="frame" x="0.0" y="300" width="393" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="DvZ-L5-hWD"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Rig-P8-IEG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVR-0D-Qtq" customClass="PieDiagramWithSpace" customModule="AllCharts" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="350" width="393" height="250"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="hpl-Ek-EkX"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DonutDiagramSpaceColorTitleUnder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1K-zr-k6a">
+                                                <rect key="frame" x="0.0" y="600" width="393" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="5fF-X7-92f"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="LIc-PG-oIa"/>
+                                                    <constraint firstAttribute="height" constant="50" id="VhZ-pl-XIt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="170-5j-v5o" customClass="PieDiagramSpaceColorTitleUnder" customModule="AllCharts" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="650" width="393" height="250"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="RRB-ck-7Rl"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DonutDiagramSpaceColorTitleUnderDual" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRV-v4-mgk">
+                                                <rect key="frame" x="0.0" y="900" width="393" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="9ax-Lm-ZvV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCM-lz-0GF" customClass="PieDiagramSpaceColorTitleUnderDual" customModule="AllCharts" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="950" width="393" height="250"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="usS-3H-a7E"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DonutDiagramSpaceColorTitleBeside" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uN-6f-g2G">
+                                                <rect key="frame" x="0.0" y="1240" width="393" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="QBL-yO-zPX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCH-th-BuM" customClass="PieDiagramSpaceColorTitleBeside" customModule="AllCharts" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="1290" width="393" height="250"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="doW-1o-wIO"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="JKr-2G-IOY" firstAttribute="leading" secondItem="zAA-g1-aE8" secondAttribute="leading" id="05Q-XB-7qf"/>
+                                            <constraint firstItem="iVR-0D-Qtq" firstAttribute="leading" secondItem="zAA-g1-aE8" secondAttribute="leading" id="1ho-py-d7Q"/>
+                                            <constraint firstItem="1uN-6f-g2G" firstAttribute="top" secondItem="BCM-lz-0GF" secondAttribute="bottom" constant="40" id="4AW-A8-QU6"/>
+                                            <constraint firstAttribute="trailing" secondItem="N1K-zr-k6a" secondAttribute="trailing" id="7qk-Xh-UdA"/>
+                                            <constraint firstItem="N1K-zr-k6a" firstAttribute="top" secondItem="iVR-0D-Qtq" secondAttribute="bottom" id="B6u-N7-xnh"/>
+                                            <constraint firstAttribute="trailing" secondItem="qVw-qv-xMx" secondAttribute="trailing" id="Eq9-OQ-RX0"/>
+                                            <constraint firstItem="qVw-qv-xMx" firstAttribute="leading" secondItem="zAA-g1-aE8" secondAttribute="leading" id="NaJ-1c-5PK"/>
+                                            <constraint firstItem="170-5j-v5o" firstAttribute="leading" secondItem="zAA-g1-aE8" secondAttribute="leading" id="Q2B-O7-nlC"/>
+                                            <constraint firstAttribute="trailing" secondItem="JKr-2G-IOY" secondAttribute="trailing" id="R9e-tr-BXO"/>
+                                            <constraint firstAttribute="trailing" secondItem="BCM-lz-0GF" secondAttribute="trailing" id="Rik-2F-FVR"/>
+                                            <constraint firstItem="BCM-lz-0GF" firstAttribute="leading" secondItem="zAA-g1-aE8" secondAttribute="leading" id="TQR-Au-CV9"/>
+                                            <constraint firstItem="vCH-th-BuM" firstAttribute="top" secondItem="1uN-6f-g2G" secondAttribute="bottom" id="UlW-H8-Q7e"/>
+                                            <constraint firstItem="JKr-2G-IOY" firstAttribute="top" secondItem="qVw-qv-xMx" secondAttribute="bottom" id="YIe-Vq-fIq"/>
+                                            <constraint firstAttribute="trailing" secondItem="170-5j-v5o" secondAttribute="trailing" id="Z10-II-IyG"/>
+                                            <constraint firstItem="iVR-0D-Qtq" firstAttribute="top" secondItem="qBH-dm-lF7" secondAttribute="bottom" id="ZEe-Jz-UGc"/>
+                                            <constraint firstItem="vCH-th-BuM" firstAttribute="leading" secondItem="zAA-g1-aE8" secondAttribute="leading" id="Zr0-1Y-wXs"/>
+                                            <constraint firstItem="RRV-v4-mgk" firstAttribute="leading" secondItem="zAA-g1-aE8" secondAttribute="leading" id="aqR-3f-o4v"/>
+                                            <constraint firstItem="RRV-v4-mgk" firstAttribute="top" secondItem="170-5j-v5o" secondAttribute="bottom" id="avZ-Fu-BGh"/>
+                                            <constraint firstAttribute="trailing" secondItem="RRV-v4-mgk" secondAttribute="trailing" id="c3h-K3-IKr"/>
+                                            <constraint firstItem="1uN-6f-g2G" firstAttribute="leading" secondItem="zAA-g1-aE8" secondAttribute="leading" id="eef-fu-krZ"/>
+                                            <constraint firstItem="N1K-zr-k6a" firstAttribute="leading" secondItem="zAA-g1-aE8" secondAttribute="leading" id="hfr-yy-9db"/>
+                                            <constraint firstItem="qBH-dm-lF7" firstAttribute="leading" secondItem="zAA-g1-aE8" secondAttribute="leading" id="iPu-1Y-hoL"/>
+                                            <constraint firstItem="qVw-qv-xMx" firstAttribute="top" secondItem="zAA-g1-aE8" secondAttribute="top" id="jd9-dZ-kyl"/>
+                                            <constraint firstAttribute="trailing" secondItem="vCH-th-BuM" secondAttribute="trailing" id="ldg-SR-Ebd"/>
+                                            <constraint firstAttribute="trailing" secondItem="qBH-dm-lF7" secondAttribute="trailing" id="m03-fJ-Fdm"/>
+                                            <constraint firstAttribute="trailing" secondItem="1uN-6f-g2G" secondAttribute="trailing" id="qwT-vT-km2"/>
+                                            <constraint firstItem="170-5j-v5o" firstAttribute="top" secondItem="N1K-zr-k6a" secondAttribute="bottom" id="rCT-5F-Kwr"/>
+                                            <constraint firstAttribute="trailing" secondItem="iVR-0D-Qtq" secondAttribute="trailing" id="rXy-uI-xla"/>
+                                            <constraint firstAttribute="height" constant="1542" id="uXH-SP-xKD"/>
+                                            <constraint firstItem="BCM-lz-0GF" firstAttribute="top" secondItem="RRV-v4-mgk" secondAttribute="bottom" id="v1K-VN-VfH"/>
+                                            <constraint firstItem="qBH-dm-lF7" firstAttribute="top" secondItem="JKr-2G-IOY" secondAttribute="bottom" id="w0W-tH-3ir"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="zAA-g1-aE8" secondAttribute="bottom" id="Aot-MB-jLI"/>
+                                    <constraint firstItem="zAA-g1-aE8" firstAttribute="leading" secondItem="zLP-C4-1EJ" secondAttribute="leading" id="CiB-5A-GjX"/>
+                                    <constraint firstItem="zAA-g1-aE8" firstAttribute="width" secondItem="zLP-C4-1EJ" secondAttribute="width" id="H5f-5N-4kw"/>
+                                    <constraint firstItem="zAA-g1-aE8" firstAttribute="top" secondItem="zLP-C4-1EJ" secondAttribute="top" id="caK-Di-UIj"/>
+                                    <constraint firstAttribute="trailing" secondItem="zAA-g1-aE8" secondAttribute="trailing" id="xKD-Zx-Fen"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bX4-1e-niH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zLP-C4-1EJ" firstAttribute="leading" secondItem="bX4-1e-niH" secondAttribute="leading" id="2TW-LV-BrT"/>
+                            <constraint firstAttribute="bottom" secondItem="zLP-C4-1EJ" secondAttribute="bottom" id="4Nc-zo-tQt"/>
+                            <constraint firstItem="zLP-C4-1EJ" firstAttribute="trailing" secondItem="bX4-1e-niH" secondAttribute="trailing" id="9n6-Nd-a2Z"/>
+                            <constraint firstItem="zLP-C4-1EJ" firstAttribute="top" secondItem="FEa-nF-5wa" secondAttribute="top" id="Pmv-hH-kFm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pieDiagram" destination="JKr-2G-IOY" id="Mok-Q3-Sh2"/>
+                        <outlet property="pieDiagramSpaceColorTitleBeside" destination="vCH-th-BuM" id="cAb-4Y-XDp"/>
+                        <outlet property="pieDiagramSpaceColorTitleUnder" destination="170-5j-v5o" id="zG9-XK-N1N"/>
+                        <outlet property="pieDiagramSpaceColorTitleUnderDual" destination="BCM-lz-0GF" id="Efc-hC-qKf"/>
+                        <outlet property="pieDiagramWithSpace" destination="iVR-0D-Qtq" id="cyW-2f-Mbu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3Y-wb-RXp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1172" y="-18"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
